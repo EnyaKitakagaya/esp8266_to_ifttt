@@ -2,8 +2,8 @@
  
 #define IFTTT_MAX_SIZE_STRING    512
  
-const char* ssid     = "";
-const char* password = "";
+const char* ssid     = ""; //SSIDを入力
+const char* password = ""; //パスワードを入力
   
 const char* host = "maker.ifttt.com";
   
@@ -54,6 +54,7 @@ void post_to_ifttt(){
   char v1[16] = "12345";
   char v2[16] = "";
   char v3[16] = "";
+  //　{event_name} と{key}の部分は編集が必要
   char header[100] = "POST /trigger/{event_name}/with/key/{key} HTTP/1.1\r\n";
   const char * host = "Host: maker.ifttt.com\r\n";
   char contentLen[50] = {0};
