@@ -12,7 +12,7 @@ void setup() {
   pinMode(12, OUTPUT);
   delay(100);
   
-  // We start by connecting to a WiFi network
+  //接続開始
   
   Serial.println();
   Serial.println();
@@ -37,23 +37,24 @@ void setup() {
 }
 
 void post_to_ifttt(){
-   // Connect to IFTTT
+  //iFTTTへの接続開始
   Serial.print("connecting to ");
   Serial.println(host);
-    // Use WiFiClient class to create TCP connections
+    // WiFiClient クラスを使用
+    
   WiFiClient client;
-  const int httpPort = 80;
-  if (!client.connect(host, httpPort)) {
+  const int httpPort = 80;//80番ポート
+  if (!client.connect(host, httpPort)) {　//接続してチェック
     Serial.println("connection failed");
     return;
   }
  
-  // This will send POST to IFTTT server
+  // サーバーへの送信情報
   char str[IFTTT_MAX_SIZE_STRING] = {0};
   char v1[16] = "12345";
   char v2[16] = "";
   char v3[16] = "";
-  char header[100] = "POST /trigger/{event_name}/with/key/du491ktvl_hU8aOLNO6zB8 HTTP/1.1\r\n";
+  char header[100] = "POST /trigger/{event_name}/with/key/{key} HTTP/1.1\r\n";
   const char * host = "Host: maker.ifttt.com\r\n";
   char contentLen[50] = {0};
   const char * contentType = "Content-Type: application/json\r\n\r\n";
