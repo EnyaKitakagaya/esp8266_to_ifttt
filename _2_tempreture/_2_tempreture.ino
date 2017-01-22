@@ -2,7 +2,7 @@
  * 温度を取得して、シリアルプロッタへ出力するプログラム
  */
 #include "DHT.h"
-#define DHTPIN 5 //ピン指定
+#define DHTPIN 12 //ピン指定
 #define DHTTYPE DHT11 //センサーの種類
 // version 1.2.3 needed
 DHT dht(DHTPIN, DHTTYPE);
