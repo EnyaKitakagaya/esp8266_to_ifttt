@@ -4,7 +4,8 @@
  
 const char* ssid     = ""; //SSIDを入力
 const char* password = ""; //パスワードを入力
-  
+
+
 const char* host = "maker.ifttt.com";
   
 void setup() {

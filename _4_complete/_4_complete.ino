@@ -5,7 +5,7 @@
  
 #define IFTTT_MAX_SIZE_STRING    512
 
-#define DHTPIN 5 //ピン指定
+#define DHTPIN 12 //ピン指定
 #define DHTTYPE DHT11 //センサーの種類
 DHT dht(DHTPIN, DHTTYPE);
  

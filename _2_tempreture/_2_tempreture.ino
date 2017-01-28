@@ -24,10 +24,12 @@ void loop() {
     return;
   }
   //シリアルプロッタ用出力
+  /* *
   Serial.print(h);
   Serial.print(',');//複数値をプロットする場合は','で区切る
   Serial.println(t); //改行で1データの区切り
-  /* *
+  /* */
+  /* */
   //シリアルモニタ出力
   Serial.print("Humidity: "); 
   Serial.print(h);
